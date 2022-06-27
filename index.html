@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+
+    <!--Css styles-->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="body-container">
+        <!--Nav Bar -->
+        <nav class="container-md" id="nav-bar">
+            <h2 class="text-center title" id="nav-title">Weather Forecast</h2>
+            
+            <!--Search form-->
+            <form class="search-form">
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="Search for a city"
+                  class="form-control text-muted form-rounded p-6 shadow-sm"
+                  id="search-bar"
+                />
+                <button type="submit" class="search-btn" id="submit-btn"><i class="fa fa-search"></i></button>
+            </form>
+        </nav>
+
+        <!--main section-->
+        <main class="container-current">
+
+            <!--current info forecast-->
+            <section class="current-info">
+
+                <!--Left hand side container-->
+                <article class="date-container">
+                    <time class="time" id="time">
+                        12:00 <span id="am-pm">PM</span>
+                    </time>
+                    <time class="date" id="date">
+                        Monday, 24 May
+                    </time>
+
+                    <!--Current info detailed list-->
+                    <section class="others" id="current-weather-items">
+                        <article class="weather-item">
+                            <section>Temperature</section>
+                            <section></section>
+                        </article>
+                        <article class="weather-item">
+                            <section>Wind Speed</section>
+                            <section></section>
+                        </article>
+                        <article class="weather-item">
+                            <section>Humidity</section>
+                            <section></section>
+                        </article>
+                    </section>
+                </article>
+
+                <!--Right hand side container-->
+                <aside class="place-container">
+                    <section class="time-zone" id="time-zone">Australia/Perth</section>
+                </aside>
+            </section>
+            
+            <!--5 days forecast-->
+            <section class="future-forecast">
+                <section class="today" id="current-temp">
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                    <h3 class="day">Monday</h3>
+                    <h4 class="temp">Night : 25.6&#176; C</h4>
+                    <h4 class="temp">Day : 25.6&#176; C</h4>
+                    <h4 class="wind">Wind : 111mph</h4>
+                    <h4 class="humidity">Humidity : 50%</h4>
+                </section>
+
+                <!--from the 2nd and to last-->
+                <section class="weather-forecast" id="weather-forecast">
+                    <section class="weather-forecast-item">
+                        <h3 class="day">Tue</h3>
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                        <h4 class="temp">Night : 25.6&#176; C</h4>
+                        <h4 class="temp">Day : 25.6&#176; C</h4>
+                        <h4 class="wind">Wind : 111mph</h4>
+                        <h4 class="humidity">Humidity : 50%</h4>
+                    </section>
+
+                    <section class="weather-forecast-item">
+                        <h3 class="day">Wed</h3>
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                        <h4 class="temp">Night : 25.6&#176; C</h4>
+                        <h4 class="temp">Day : 25.6&#176; C</h4>
+                        <h4 class="wind">Wind : 111mph</h4>
+                        <h4 class="humidity">Humidity : 50%</h4>
+                    </section>
+
+                    <section class="weather-forecast-item">
+                        <h3 class="day">Thu</h3>
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                        <h4 class="temp">Night : 25.6&#176; C</h4>
+                        <h4 class="temp">Day : 25.6&#176; C</h4>
+                        <h4 class="wind">Wind : 111mph</h4>
+                        <h4 class="humidity">Humidity : 50%</h4>
+                    </section>
+
+                    <section class="weather-forecast-item">
+                        <h3 class="day">Fri</h3>
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                        <h4 class="temp">Night : 25.6&#176; C</h4>
+                        <h4 class="temp">Day : 25.6&#176; C</h4>
+                        <h4 class="wind">Wind : 111mph</h4>
+                        <h4 class="humidity">Humidity : 50%</h4>
+                    </section>
+                </section>
+            </section>
+
+        </main>
+    </section>
+
+    <script src="./index.js"></script>
+    <script src="./request.js"></script>
+
+    <!--Bootstrap w/ popper-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!--For icons-->
+    <script src="https://kit.fontawesome.com/77e280daa8.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
