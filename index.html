@@ -26,7 +26,7 @@
             <h2 class="text-center title" id="nav-title">Weather Forecast</h2>
             
             <!--Search form-->
-            <form class="search-form">
+            <form class="search-input">
                 <input
                   type="text"
                   name="city"
@@ -57,19 +57,19 @@
                     <section class="others" id="current-weather-items">
                         <article class="weather-item">
                             <section>Temperature:</section>
-                            <section>00</section>
+                            <section id="temp"></section>
                         </article>
                         <article class="weather-item">
                             <section>Wind Speed:</section>
-                            <section>00</section>
+                            <section id="wind"></section>
                         </article>
                         <article class="weather-item">
                             <section>Humidity:</section>
-                            <section>00</section>
+                            <section id="humidity"></section>
                         </article>
                         <article class="weather-item">
                             <section>UV index:</section>
-                            <section>00</section>
+                            <section id="uv-index"></section>
                         </article>
                     </section>
                 </article>
@@ -134,7 +134,7 @@
         </main>
     </section>
 
-    <script src="./index.js"></script>
+    <script src="./app.js"></script>
     <script src="./request.js"></script>
 
     <!--Bootstrap w/ popper-->

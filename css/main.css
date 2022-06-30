@@ -18,14 +18,14 @@
 }}
 
 /*search form*/
-.search-form {
+.search-input {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px 10px; 
 }
 
-.search-form input {
+.search-input input {
     border-radius: 60px;
     border: 0; 
 }
