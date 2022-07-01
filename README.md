@@ -29,7 +29,7 @@ SO THAT I can plan a trip accordingly
 
 
 ## Deployed link:
-Incomplete [link text itself].
+Incomplete [https://maytiara.github.io/module-6-web-api-weather-app/].
 
 
 - - -
