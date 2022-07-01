@@ -102,7 +102,7 @@ const app = {
     fetchCoordinates: (ev) => {
         ev.preventDefault();
         var cityName = document.getElementById("search-bar").value;
-        let url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${weatherKey}`
+        let url = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${weatherKey}`
         
         //----In addition, to add local storage ---Will change later
         let cities = getCitiesFromStorage()
@@ -125,7 +125,7 @@ const app = {
       let lon = data.lon;
       let lang = 'en';
       let units = 'metric';
-      let url = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=${units}&lang=${lang}`;
+      let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=${units}&lang=${lang}`;
 
       //fetch the weather
       fetch(url)
@@ -151,7 +151,7 @@ const app = {
             let dt = new Date(day.dt * 1000); //timestamp * 1000
             return `<section class="weather-forecast-item">
                 <h3 class="day">${dt.toDateString()}</h3>
-                <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+                <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
                 <h4 class="temp">High ${day.temp.max}&deg;C Low ${day.temp.min}&deg;C</h4>
                 <h4 class="wind">Wind: ${day.wind_speed}m/s</h4>
                 <h4 class="humidity">Humidity : ${day.humidity}%</h4>
