@@ -36,6 +36,15 @@
                 />
                 <button type="submit" class="search-btn" id="submit-btn"><i class="fa fa-search"></i></button>
             </form>
+
+            <!--Section for recent searches-->
+            <section class="recent-searches">
+                <h2 id="recent-label">Recent Searches:</h2>
+                <ul class="recent-list" id="recentSearchList"></ul>
+                <button class="clear-button" type="button" id="clearHistory">
+                    <p>Clear History</p>
+                </button>
+            </section>
         </nav>
 
         <!--main section-->
@@ -82,52 +91,18 @@
             
             <!--5 days forecast-->
             <section class="future-forecast">
-                <section class="today" id="current-temp">
-                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-                    <h3 class="day">Monday</h3>
-                    <h4 class="temp">Night : 25.6&#176; C</h4>
-                    <h4 class="temp">Day : 25.6&#176; C</h4>
-                    <h4 class="wind">Wind : 111mph</h4>
-                    <h4 class="humidity">Humidity : 50%</h4>
-                </section>
 
                 <!--from the 2nd and to last-->
                 <section class="weather-forecast" id="weather-forecast">
                     <section class="weather-forecast-item">
-                        <h3 class="day">Tue</h3>
+                        <h3 class="day"></h3>
                         <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-                        <h4 class="temp">Night : 25.6&#176; C</h4>
-                        <h4 class="temp">Day : 25.6&#176; C</h4>
-                        <h4 class="wind">Wind : 111mph</h4>
-                        <h4 class="humidity">Humidity : 50%</h4>
+                        <h4 class="temp"></h4>
+                        <h4 class="temp"></h4>
+                        <h4 class="wind"></h4>
+                        <h4 class="humidity"></h4>
                     </section>
 
-                    <section class="weather-forecast-item">
-                        <h3 class="day">Wed</h3>
-                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-                        <h4 class="temp">Night : 25.6&#176; C</h4>
-                        <h4 class="temp">Day : 25.6&#176; C</h4>
-                        <h4 class="wind">Wind : 111mph</h4>
-                        <h4 class="humidity">Humidity : 50%</h4>
-                    </section>
-
-                    <section class="weather-forecast-item">
-                        <h3 class="day">Thu</h3>
-                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-                        <h4 class="temp">Night : 25.6&#176; C</h4>
-                        <h4 class="temp">Day : 25.6&#176; C</h4>
-                        <h4 class="wind">Wind : 111mph</h4>
-                        <h4 class="humidity">Humidity : 50%</h4>
-                    </section>
-
-                    <section class="weather-forecast-item">
-                        <h3 class="day">Fri</h3>
-                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-                        <h4 class="temp">Night : 25.6&#176; C</h4>
-                        <h4 class="temp">Day : 25.6&#176; C</h4>
-                        <h4 class="wind">Wind : 111mph</h4>
-                        <h4 class="humidity">Humidity : 50%</h4>
-                    </section>
                 </section>
             </section>
 
