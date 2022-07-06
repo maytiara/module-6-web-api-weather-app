@@ -60,10 +60,5 @@ const weatherForecastApp = {
 };
 
 weatherForecastApp.fetchBegin();
-testConsole();
 
-
-function testConsole() {
-    console.log(weatherForecastApp);
-}
 //create an 
