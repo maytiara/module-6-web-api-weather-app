@@ -1,13 +1,29 @@
 const timeEl = document.getElementById ('time'); // var for city current time
 const dateEl = document.getElementById ('date'); // var for city current time
 const currentWeatherItemsel = document.getElementById ('current-weather-items'); // var for placeholder to show the current weather data
-const timezoneEl = document.getElementById ('time-zone'); // var for placeholder to show the current time in the search city
-
 
 const domainURL = `https://api.openweathermap.org`;
 
 //----The beginning of the app----//
 document.getElementById('submit-btn').addEventListener('click', fetchCoordinates);
+
+function renderWeather(data) {
+    // print all the values to html
+    let humidity = data.current.humidity;
+    let temp = data.current.temp;
+    let wind_speed = data.current.wind_speed;
+    let uvi = data.current.uvi;
+
+    document.getElementById("temp").innerHTML = `${temp} &#176;C`;
+    document.getElementById("wind_speed").innerHTML = wind_speed;
+    document.getElementById("humidity").innerHTML = humidity;
+    document.getElementById("uvi").innerHTML = uvi;
+
+}
+
+function renderFutureForcast(data) {
+
+}
 
 function fetchWeather (data) {
     let latitude = data.lat;
@@ -20,8 +36,8 @@ function fetchWeather (data) {
         return response.json ();
     })
     .then ((data) => {
-        //showWeatherData(data)
-        //weatherForecastApp.showDailyWeather(data);
+        renderWeather(data);
+        renderFutureForcast(data);
     })
 }
 
