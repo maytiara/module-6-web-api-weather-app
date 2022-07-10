@@ -102,12 +102,21 @@
 /*Left hand side container*/
 .date-container{
     font-weight: 100;
+    margin-top: 50px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .date-container 
 .time{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 300;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .date-container 
@@ -129,6 +138,8 @@
     border: 1px solid #eee;
     outline: none;
     border: 0;
+    max-width: 300px;
+    font-size: 2rem;
 }
 
 .others 
@@ -316,15 +327,14 @@
         margin-top: -23px;
     }
 
+    .date-container {
+        margin: 90px 20px 0 20px;
+    }
+    
     .date-container 
     .time {
-        font-size: 3.15rem;
+        font-size: 2rem;
         font-weight: 500;
-    }
-
-    .date-container 
-    #am-pm{
-        font-size: 1.25rem;
     }
 
     .date-container 
