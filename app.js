@@ -7,7 +7,7 @@ const domainURL = `https://api.openweathermap.org`;
 
 
 
-let cities [] //for local storage
+ //for local storage
 let citySearch = document.getElementById ('search-bar').value; //for local storage
 
 //----The beginning of the app----//
@@ -94,4 +94,3 @@ function fetchCoordinates () {
         fetchWeather(data[0]);
     })
 }
-
