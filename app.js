@@ -17,6 +17,7 @@ function renderWeather(data) { //this renders the fetch data from the open-sourc
     let wind_speed = data.current.wind_speed;
     let uvi = data.current.uvi;
     let dt = new Date(data.current.dt * 1000);
+    let city = data.timezone; // to fetch the city using timezone parameter
 
     document.getElementById("temp").innerHTML = `${temp} &#176;C`; // html element as the placeholder of the print values from fetch data
     document.getElementById("wind_speed").innerHTML = wind_speed;
@@ -24,7 +25,7 @@ function renderWeather(data) { //this renders the fetch data from the open-sourc
     document.getElementById("uvi").innerHTML = uvi;
 
     document.getElementById("date").innerHTML = `${dt.getDate()}/${dt.getMonth() + 1}/${dt.getFullYear()}`; // html element as the placeholder of the print values from fetch data, using the current ES6 syntax
-
+    document.getElementById("time").innerHTML = city; // placeholder for current search city
 }
 
 // User will see the 5 day forecast data
