@@ -5,10 +5,18 @@ const currentWeatherItemsel = document.getElementById ('current-weather-items');
 
 const domainURL = `https://api.openweathermap.org`;
 
+
+
+let cities [] //for local storage
+let citySearch = document.getElementById ('search-bar').value; //for local storage
+
 //----The beginning of the app----//
 
 //User, have to enter the city using search bar
-document.getElementById('submit-btn').addEventListener('click', fetchCoordinates); //Create an add event listener to search the city 
+document.getElementById('submit-btn').addEventListener('click', fetchCoordinates); {//Create an add event listener to search the city 
+    localStorage.setItem('cities', JSON.stringify(citySearch.value())); //for local storage
+    citySearch = localStorage.getItem ('cities'); //for local storage
+}
 
 //User see the current information of the search city using this placeholder
 function renderWeather(data) { //this renders the fetch data from the open-source API
@@ -72,16 +80,10 @@ function fetchWeather (data) {
     })
 }
 
-//Assigned object in an empty array to save the input value in local storage
-setCities = []
-
 //Call the data from the open source APIs
 function fetchCoordinates () { 
     let cityName = document.getElementById('search-bar').value;
     let url = `${domainURL}/geo/1.0/direct?q=${cityName}&limit=1&appid=0cc20eb061ce1f620419a27e3dc314a7` //API url, to call a city name
-
-    setCities.push(cityNames);
-    localStorage.setItem('cities', cityName);
 
     //--Fetch function to call city name
     return fetch (url)
@@ -91,27 +93,5 @@ function fetchCoordinates () {
     .then ((data) => {
         fetchWeather(data[0]);
     })
-    
 }
 
-// HTML element for reference: for local storage
-// <section class="recent-list">
-// <ul class="recent-list" id="recentSearchList">....</ul>
-// </section>
-
-// Assigned object from local strograge
-// let cities = getCitiesFromStorage ()
-// 
-// localStorage.getItem('cities', fetchCoordinates(data));
-// 
-// //Fuction to create a local storage
-// function getCitiesFromStorage() {
-//     if (localStorage.getItem("cities"))
-//         return JSON.parse(localStorage.getItem("cities"));
-//     return [];
-// }
-
-//function searchCity () {
-//    const searchItem = document.getElementById('search-bar').value;
-//    localStorage.setItem('searchItem', JSON.stringify(searchItem))
-//}
