@@ -86,4 +86,19 @@ function fetchCoordinates () {
     
 }
 
+// HTML element for reference: for local storage
+// <section class="recent-list">
+// <ul class="recent-list" id="recentSearchList">....</ul>
+// </section>
+
+// Assigned object from local strograge
+let cities = getCitiesFromStorage ();
+
+//Fuction to create a local storage
+function getCitiesFromStorage() {
+    if (localStorage.getItem("cities"))
+        return JSON.parse(localStorage.getItem("cities"));
+    return [];
+}
+
 
