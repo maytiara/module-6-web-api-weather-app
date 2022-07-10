@@ -111,12 +111,6 @@
 }
 
 .date-container 
-#am-pm{
-    font-size: 1.5rem;
-    margin-left: -10px;
-}
-
-.date-container 
 .date{
     font-size: 1.5rem;
     font-weight: 200;
@@ -131,7 +125,7 @@
     backdrop-filter: multiply;
     padding:10px;
     border-radius: 10px;
-    margin: -10px 0;
+    margin: 10px 0;
     border: 1px solid #eee;
     outline: none;
     border: 0;
